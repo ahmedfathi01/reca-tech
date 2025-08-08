@@ -655,24 +655,12 @@ body {
 
 /* Robot Section */
 .robot-section {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    padding: 100px 0;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  padding: 100px 0;
     position: relative;
     overflow: hidden;
 }
 
-.robot-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 100, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(100, 0, 255, 0.05) 0%, transparent 50%);
-}
 
 .robot-content {
     display: grid;
@@ -994,8 +982,8 @@ body {
 
 /* Services Section */
 .services-section {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    padding: 120px 0;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  padding: 120px 0;
     position: relative;
     overflow: hidden;
 }
@@ -1007,10 +995,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 60% 60%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+  
 }
 
 .services-content {
@@ -1267,6 +1252,20 @@ body {
         gap: 20px;
     }
 
+    /* Uniform card sizing for mobile */
+    .service-card {
+        min-height: 280px;
+        padding: 30px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .service-description {
+        flex-grow: 1;
+        margin-bottom: 20px;
+    }
+
     .floating-elements {
         display: none;
     }
@@ -1278,18 +1277,19 @@ body {
     }
 
     .service-card {
+        min-height: 260px;
         padding: 25px 20px;
     }
 
-         .services-section {
-         padding: 80px 0;
-     }
- }
+    .services-section {
+        padding: 80px 0;
+    }
+}
 
  /* About Section */
 .about-section {
-  background: linear-gradient(135deg, #2d1b69 0%, #1e1b4b 50%, #312e81 100%); 
-    padding: 120px 0;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  padding: 120px 0;
     position: relative;
     overflow: hidden;
 }
@@ -1468,8 +1468,8 @@ body {
 
  /* Achievements Section */
  .achievements-section {
-     background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-     padding: 120px 0;
+  background: linear-gradient(135deg, #2d1b69 0%, #1e1b4b 50%, #312e81 100%);
+  padding: 120px 0;
      position: relative;
      overflow: hidden;
  }
@@ -1680,35 +1680,14 @@ body {
 
  /* Courses Section */
 .courses-section {
-  background: linear-gradient(135deg, #2d1b69 0%, #1e1b4b 50%, #312e81 100%); 
-     padding: 120px 0;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  padding: 120px 0;
     position: relative;
     overflow: hidden;
 }
 
-.courses-section::before {
-    content: '';
-    position: absolute;
-    top: 15%;
-    left: -5%;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    z-index: 0;
-}
 
-.courses-section::after {
-    content: '';
-    position: absolute;
-    bottom: 20%;
-    right: -8%;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50%;
-    z-index: 0;
-}
+
 
  .courses-header {
      text-align: center;
@@ -1950,8 +1929,47 @@ body {
          gap: 20px;
      }
 
+     /* Uniform achievement card sizing for mobile */
      .achievement-card {
-         padding: 30px 20px;
+         min-height: 320px;
+         padding: 35px 25px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     .achievement-number {
+         margin: 20px 0;
+         flex-shrink: 0;
+     }
+
+     .achievement-desc {
+         margin-top: auto;
+         text-align: center;
+     }
+
+     /* Uniform course card sizing for mobile */
+     .course-card {
+         min-height: 520px;
+         display: flex;
+         flex-direction: column;
+     }
+
+     .course-content {
+         flex-grow: 1;
+         display: flex;
+         flex-direction: column;
+         padding: 25px;
+     }
+
+     .course-description {
+         flex-grow: 1;
+         margin-bottom: 20px;
+     }
+
+     .course-footer {
+         margin-top: auto;
      }
 
      .about-section,
@@ -1978,19 +1996,32 @@ body {
          font-size: 42px;
      }
 
+     /* Uniform smaller mobile card sizing */
      .achievement-card {
+         min-height: 280px;
          padding: 25px 15px;
+     }
+
+     .course-card {
+         min-height: 480px;
      }
 
      .course-content {
          padding: 20px;
      }
 
+     .contact-item {
+         min-height: 100px;
+         padding: 20px 15px;
+         flex-direction: column;
+         gap: 15px;
+     }
+
      .about-image {
          height: 300px;
      }
 
-         .experience-highlight {
+     .experience-highlight {
         flex-direction: column;
         text-align: center;
         gap: 10px;
@@ -2302,10 +2333,26 @@ body {
     
     .contact-info {
         align-items: center;
+        gap: 20px;
+        margin-top: 30px;
     }
     
+    /* Uniform contact card sizing for mobile */
     .contact-item {
+        min-height: 120px;
+        padding: 25px 20px;
         justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-details {
+        flex-grow: 1;
         text-align: center;
     }
 }
@@ -2327,18 +2374,35 @@ body {
         font-size: 20px;
     }
     
+    .contact-info {
+        gap: 15px;
+        margin-top: 25px;
+    }
+    
     .contact-item {
         flex-direction: column;
         text-align: center;
         gap: 15px;
+        padding: 20px 15px;
+        min-height: 140px;
+        margin-bottom: 10px;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
     }
     
     .contact-details h4 {
         text-align: center;
+        font-size: 16px;
+        margin-bottom: 8px;
     }
     
     .contact-details p {
         text-align: center;
+        font-size: 14px;
     }
 }
 
